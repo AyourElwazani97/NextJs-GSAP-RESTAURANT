@@ -1,0 +1,310 @@
+body {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  color: #fff;
+}
+.lineChildren {
+  transform: translate(0px, 800px);
+}
+.lineParent {
+  overflow: hidden;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Teko", sans-serif;
+}
+.costumCursur {
+  z-index: calc(9999 * 99999);
+  position: fixed;
+  height: 50px;
+  width: 50px;
+  mix-blend-mode: difference;
+  border-radius: 100%;
+  border: 2px solid #fff;
+  background: #000;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: 300ms ease-out;
+}
+// gallry style
+.panel {
+  width: 100%;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+.wrappingIT {
+  width: 200% !important;
+  display: flex;
+  flex-wrap: nowrap;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+.green,
+.white {
+  margin: 0 !important;
+  padding: 0 !important;
+  height: 100vh;
+}
+.green {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #000;
+  .greenPanle_ImageHandler {
+    overflow: hidden;
+    position: relative;
+    img {
+      width: 800px;
+      height: 600px;
+      object-fit: cover;
+    }
+  }
+  .greenPanelSubTitle,
+  .greenPanelTitle {
+    position: absolute;
+    font-size: 220px;
+    font-family: "Teko", sans-serif;
+    z-index: 1;
+    font-weight: 500;
+  }
+  .greenPanelSubTitle {
+    top: 50%;
+    right: 110px;
+  }
+  .mexicotitle_panel {
+    position: absolute;
+    bottom: 50%;
+    font-size: 220px;
+    font-family: "Teko", sans-serif;
+    z-index: 9;
+    right: 2%;
+  }
+}
+.white {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  img {
+    pointer-events: none;
+    transition: transform 400ms ease-out;
+    &:hover {
+      transform: scale(1.5);
+    }
+  }
+  h1 {
+    position: absolute;
+    font-size: 220px;
+    font-family: "Teko", sans-serif;
+    color: #000;
+    z-index: 999;
+  }
+}
+.whitePannelGrid {
+  display: grid;
+  place-content: center;
+  grid-template-columns: repeat(3, 350px);
+  grid-gap: 10px;
+  img {
+    object-fit: cover;
+    z-index: 1;
+    filter: drop-shadow(0 50px 100px rgb(134, 133, 133));
+    min-height: 300px;
+    opacity: 0;
+    width: 200px;
+    height: 300px;
+  }
+}
+.hero {
+  &::before {
+    content: "";
+    position: absolute;
+    background: #000;
+    height: 50vh;
+    top: 0;
+    left: 0;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    background: #fff;
+    height: 50vh;
+    top: 50%;
+    right: 0;
+  }
+}
+@media only screen and (max-width: 1400px) {
+  .green {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #000;
+    .greenPanle_ImageHandler {
+      overflow: hidden;
+      position: relative;
+      img {
+        width: 600px;
+        height: 400px;
+        object-fit: cover;
+      }
+    }
+    .greenPanelSubTitle,
+    .greenPanelTitle {
+      position: absolute;
+      font-size: 150px;
+      font-family: "Teko", sans-serif;
+      z-index: 1;
+      font-weight: 500;
+    }
+    .greenPanelSubTitle {
+      top: 50%;
+      right: 110px;
+    }
+    .mexicotitle_panel {
+      position: absolute;
+      bottom: 50%;
+      font-size: 150px;
+      font-family: "Teko", sans-serif;
+      z-index: 9;
+      right: 2%;
+    }
+  }
+  .white {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    h1 {
+      position: absolute;
+      font-size: 150px;
+      font-family: "Teko", sans-serif;
+      color: #000;
+      z-index: 999;
+    }
+  }
+  .whitePannelGrid {
+    display: grid;
+    place-content: center;
+    grid-template-columns: repeat(3, 350px);
+    grid-gap: 10px;
+    img {
+      object-fit: cover;
+      z-index: 1;
+      filter: drop-shadow(0 50px 100px rgb(134, 133, 133));
+      min-height: 300px;
+      opacity: 0;
+    }
+  }
+}
+//mobile
+@media only screen and (max-width: 620px) {
+  // gallry style
+  .panel {
+    width: 100%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50% !important;
+    padding: 0;
+    margin: 0;
+  }
+  .wrappingIT {
+    width: 100% !important;
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+  }
+  .green,
+  .white {
+    height: 100% !important;
+  }
+  .green {
+    display: none;
+  }
+  .white {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    text-align: center;
+    h1 {
+      position: absolute;
+      font-size: 100px;
+      font-family: "Teko", sans-serif;
+      color: #000;
+      z-index: 999;
+    }
+  }
+  .whitePannelGrid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    grid-gap: 0px;
+    padding: 20px 0 20px 0;
+    img {
+      object-fit: cover;
+      z-index: 1;
+      filter: drop-shadow(0 50px 100px rgb(134, 133, 133));
+      min-height: 300px;
+      opacity: 1;
+      width: 200px;
+      height: 100%;
+      margin: 20px 0 20px 0;
+    }
+  }
+  canvas {
+    width: 100%;
+    max-width: 100%;
+    min-width: 100%;
+  }
+  .hero {
+    &::before {
+      content: "";
+      position: absolute;
+      background: #000;
+      height: 50%;
+      top: 0;
+      left: 0;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      background: #000;
+      height: 50%;
+      top: 50%;
+      right: 0;
+    }
+  }
+}

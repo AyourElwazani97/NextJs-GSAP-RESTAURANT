@@ -1,0 +1,140 @@
+.contactUs {
+  position: $re;
+  width: $per;
+  height: $vh;
+  overflow: hidden;
+  display: $f;
+  justify-content: $c;
+  align-items: $c;
+  flex-direction: $cl;
+  &::before {
+    content: "Contact Us";
+    color: transparent;
+    -webkit-text-stroke: 2px #fff;
+    font-family: $font;
+    font-size: 150px;
+    position: absolute;
+    top: 15%;
+    left: 0%;
+  }
+  .Hovered_Effect_Div {
+    width: 700px;
+    height: 700px;
+    position: absolute;
+    z-index: 3;
+    cursor: pointer;
+  }
+  .contactUs_child {
+    width: $perhelf;
+    display: $f;
+    justify-content: $c;
+    align-items: $c;
+    flex-direction: $cl;
+    text-align: $c;
+    font-family: $po;
+    .handle_child_form {
+      z-index: 4;
+    }
+    h1 {
+      color: #fff;
+    }
+    form {
+      div {
+        margin-bottom: 20px;
+      }
+      input {
+        width: 350px;
+        padding: 7px;
+        border: 2px solid #fff;
+        background: transparent;
+        padding-left: 10px;
+        font-family: $ro;
+        color: #fff;
+        &::placeholder {
+          color: #fff;
+          font-family: $ro;
+        }
+      }
+      button {
+        text-align: center;
+        font-weight: $b;
+        color: #fff;
+        border: 2px solid #fff;
+        background: transparent;
+        padding: 7px;
+        width: 250px;
+        transition: 400ms ease-out;
+        letter-spacing: 2px;
+        &:hover {
+          color: #000;
+          box-shadow: inset 19em 0 0 #fff;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 700px) {
+  .contactUs {
+    position: $re;
+    width: 100%;
+    height: 100%;
+    padding: $padd;
+    &::before {
+      content: "Contact";
+      color: transparent;
+      -webkit-text-stroke: 2px #fff;
+      font-family: "Corinthia", cursive;
+      font-size: 200px;
+      transform: rotate(90deg);
+      top: 10%;
+      position: absolute;
+    }
+    .contactUs_child {
+      width: $per;
+      display: $f;
+      justify-content: $c;
+      align-items: $c;
+      flex-direction: $cl;
+      text-align: $c;
+      font-family: $po;
+      h1 {
+        color: #fff;
+      }
+      form {
+        div {
+          margin-bottom: 20px;
+        }
+        input {
+          width: 350px;
+          padding: 7px;
+          border: 2px solid #fff;
+          background: transparent;
+          padding-left: 10px;
+          font-family: $ro;
+          color: #fff;
+          &::placeholder {
+            color: #fff;
+            font-family: $ro;
+          }
+        }
+        button {
+          text-align: center;
+          font-weight: $b;
+          color: #fff;
+          border: 2px solid #fff;
+          background: transparent;
+          padding: 7px;
+          width: 250px;
+          transition: 400ms ease-out;
+          letter-spacing: 2px;
+          &:hover {
+            color: #000;
+            box-shadow: inset 19em 0 0 #fff;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}

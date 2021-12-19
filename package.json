@@ -1,0 +1,30 @@
+{
+  "name": "mexican-restaurant",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build && next export",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "file-loader": "^6.2.0",
+    "gsap": "^3.8.0",
+    "hover-effect": "^1.1.0",
+    "luxy.js": "^0.1.0",
+    "next": "12.0.7",
+    "next-compose-plugins": "^2.2.1",
+    "next-images": "^1.8.4",
+    "next-transpile-modules": "^9.0.0",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "react-intersection-observer": "^8.33.0",
+    "sass": "^1.45.0",
+    "three": "^0.135.0",
+    "url-loader": "^4.1.1"
+  },
+  "devDependencies": {
+    "eslint": "8.4.1",
+    "eslint-config-next": "12.0.7"
+  }
+}

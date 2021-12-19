@@ -1,0 +1,136 @@
+.our_services {
+  width: $per;
+  height: $vh;
+  padding: $padd;
+  display: $f;
+  justify-content: $c;
+  align-items: $c;
+  flex-direction: $cl;
+  position: $re;
+  background: #000;
+  h1 {
+    font-size: 200px;
+    font-family: $font;
+    letter-spacing: 10px;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    position: absolute;
+    mix-blend-mode: difference;
+    z-index: 1;
+  }
+  .our_services_child {
+    width: $perhelf;
+    display: $f;
+    justify-content: $sp;
+    align-items: $c;
+    img {
+      object-fit: $cv;
+      clip-path: inset(50% 0%);
+      width: 350px;
+      height: 350px;
+    }
+    .handel_image_services {
+      width: $per;
+      position: $re;
+      display: $f;
+      justify-content: $c;
+      align-items: $c;
+      overflow: hidden;
+      margin: 0 10px 0 10px;
+      span {
+        position: absolute;
+        font-family: $font;
+        font-weight: $b;
+        font-size: 50px;
+      }
+    }
+  }
+}
+//medium
+@media only screen and (max-width: 1400px) {
+  .our_services {
+    width: $per;
+    height: $vh;
+    padding: $padd;
+    h1 {
+      font-size: 150px;
+    }
+    .our_services_child {
+      img {
+        object-fit: $cv;
+        clip-path: inset(50% 0%);
+        width: 300px;
+        height: 300px;
+      }
+    }
+    .handel_image_services {
+      width: $per;
+      position: $re;
+      display: $f;
+      justify-content: $c;
+      align-items: $c;
+      overflow: hidden;
+      margin: 0 10px 0 10px;
+      text-align: $c;
+      span {
+        position: absolute;
+        font-family: $font;
+        font-weight: $b;
+        font-size: 50px;
+      }
+    }
+  }
+}
+//mobile
+@media only screen and (max-width: 620px) {
+  .our_services {
+    width: $per;
+    height: $per;
+    padding: $padd;
+    display: $f;
+    justify-content: $c;
+    align-items: $c;
+    flex-direction: $cl;
+    position: $re;
+    background: #000;
+    h1 {
+      font-size: 100px;
+      font-family: $font;
+      letter-spacing: 10px;
+      margin: 0;
+      padding: 0;
+      color: #fff;
+      position: $re;
+      mix-blend-mode: difference;
+      z-index: 1;
+      text-align: $c;
+    }
+    .our_services_child {
+      width: $perhelf;
+      display: $f;
+      justify-content: $sp;
+      align-items: $c;
+      flex-direction: $cl;
+      img {
+        object-fit: $cv;
+        clip-path: none;
+      }
+      .handel_image_services {
+        width: $per;
+        position: $re;
+        display: $f;
+        justify-content: $c;
+        align-items: $c;
+        overflow: hidden;
+        margin: 20px 0px 20px 0px;
+        span {
+          position: absolute;
+          font-family: $font;
+          font-weight: $b;
+          font-size: 50px;
+        }
+      }
+    }
+  }
+}

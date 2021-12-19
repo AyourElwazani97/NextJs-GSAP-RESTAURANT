@@ -1,0 +1,186 @@
+.termofServices {
+    width: $per;
+    height: $per;
+    color: #fff;
+    display: $f;
+    justify-content: $c;
+    align-items: $c;
+    flex-direction: $cl;
+    h1 {
+      font-family: "Corinthia", cursive;
+      text-align: $c;
+      font-size: 100px;
+      margin: 0;
+      text-decoration: underline double;
+    }
+    p {
+      font-weight: $b;
+      line-height: 2;
+      text-align: $c;
+      font-family: $ro;
+    }
+    .termofServices_child {
+      width: $perhelf;
+      display: $f;
+      justify-content: $c;
+      align-items: $c;
+      text-align: left;
+      ul {
+        li {
+          list-style: none;
+          margin-bottom: 20px;
+          width: 700px;
+          line-height: 2;
+          font-family: $ro;
+          span{
+              font-weight: $b;
+          }
+        }
+        li:nth-child(1)::before{
+          content: "1.";
+          color: transparent;
+          -webkit-text-stroke: 2px #FFF;
+          font-size: 50px;
+          margin-right: 10px;
+        } 
+        li:nth-child(2)::before{
+          content: "2.";
+          font-size: 50px;
+          color: transparent;
+          -webkit-text-stroke: 2px #FFF;
+          margin-right: 10px;
+        }
+        li:nth-child(3)::before{
+          content: "3.";
+          font-size: 50px;
+          color: transparent;
+          -webkit-text-stroke: 2px #FFF;
+          margin-right: 10px;
+        }
+        li:nth-child(4)::before{
+          content: "4.";
+          font-size: 50px;
+          color: transparent;
+          -webkit-text-stroke: 2px #FFF;
+          margin-right: 10px;
+        }
+        li:nth-child(5)::before{
+          content: "5.";
+          font-size: 50px;
+          color: transparent;
+          -webkit-text-stroke: 2px #FFF;
+          margin-right: 10px;
+        }
+        li:nth-child(6)::before{
+          content: "6.";
+          font-size: 50px;
+          color: transparent;
+          -webkit-text-stroke: 2px #FFF;
+          margin-right: 10px;
+        }
+        li:nth-child(7)::before{
+          content: "7.";
+          font-size: 50px;
+          color: transparent;
+          -webkit-text-stroke: 2px #FFF;
+          margin-right: 10px;
+        }
+        li:nth-child(8)::before{
+            content: "8.";
+            font-size: 50px;
+            color: transparent;
+            -webkit-text-stroke: 2px #FFF;
+            margin-right: 10px;
+          }
+        p{
+            text-align: left;
+            width: 1000px;
+        }
+      }
+    }
+  }
+  @media only screen and (max-width:700px){
+    .termofServices {
+      h1 {
+        font-family: "Corinthia", cursive;
+        text-align: $c;
+        font-size: 100px;
+        margin: 0;
+        text-decoration: underline double;
+      }
+      p {
+        font-weight: $b;
+        line-height: 2;
+        text-align: $c;
+        font-family: $ro;
+      }
+      .termofServices_child {
+        width: $per;
+        display: $f;
+        justify-content: $c;
+        align-items: $c;
+        text-align: left;
+        ul {
+          li {
+            list-style: none;
+            margin-bottom: 20px;
+            width: 100%;
+            line-height: 2;
+            font-family: $ro;
+          }
+          li:nth-child(1)::before{
+            content: "1.";
+            color: transparent;
+            -webkit-text-stroke: 2px #FFF;
+            font-size: 50px;
+            margin-right: 10px;
+          } 
+          li:nth-child(2)::before{
+            content: "2.";
+            font-size: 50px;
+            color: transparent;
+            -webkit-text-stroke: 2px #FFF;
+            margin-right: 10px;
+          }
+          li:nth-child(3)::before{
+            content: "3.";
+            font-size: 50px;
+            color: transparent;
+            -webkit-text-stroke: 2px #FFF;
+            margin-right: 10px;
+          }
+          li:nth-child(4)::before{
+            content: "4.";
+            font-size: 50px;
+            color: transparent;
+            -webkit-text-stroke: 2px #FFF;
+            margin-right: 10px;
+          }
+          li:nth-child(5)::before{
+            content: "5.";
+            font-size: 50px;
+            color: transparent;
+            -webkit-text-stroke: 2px #FFF;
+            margin-right: 10px;
+          }
+          li:nth-child(6)::before{
+            content: "6.";
+            font-size: 50px;
+            color: transparent;
+            -webkit-text-stroke: 2px #FFF;
+            margin-right: 10px;
+          }
+          li:nth-child(7)::before{
+            content: "7.";
+            font-size: 50px;
+            color: transparent;
+            -webkit-text-stroke: 2px #FFF;
+            margin-right: 10px;
+          }
+          p{
+            width: 100%;
+          }
+        }
+      }
+    }
+  }

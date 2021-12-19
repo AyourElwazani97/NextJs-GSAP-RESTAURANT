@@ -1,0 +1,141 @@
+._hero {
+  width: $per;
+  height: $vh;
+  display: $f;
+  justify-content: $c;
+  align-items: $c;
+  flex-direction: $cl;
+  background: rgb(218, 214, 214);
+
+  h1 {
+    font-family: $font;
+    font-size: 180px;
+    letter-spacing: 20px;
+    text-align: $c;
+    color: #000;
+  }
+  ._hero_child {
+    width: $perhelf;
+    display: $f;
+    justify-content: $sp;
+    align-items: $c;
+    position: $re;
+    z-index: 999;
+    .firstImage_Hero {
+      overflow: hidden;
+      object-fit: $cv;
+      width: 1000px;
+      height: 500px;
+    }
+    .image_hero_text {
+      position: absolute;
+      h2 {
+        font-size: 100px;
+        color: #fff;
+      }
+    }
+    .first_child_hero_img {
+      overflow: hidden;
+      img {
+        object-fit: $cv;
+        width: 300px;
+        height: 400px;
+      }
+    }
+    .last_child_hero_img {
+      overflow: hidden;
+      img {
+        object-fit: $cv;
+        width: 300px;
+        height: 400px;
+      }
+    }
+  }
+  .opening_etxt {
+    margin-top: 5px;
+    position: $re;
+    z-index: 9;
+    p {
+      font-weight: $b;
+      font-size: 30px;
+      color: #fff;
+      font-family: $po;
+      text-align: $c;
+      margin: 0;
+    }
+  }
+}
+@media only screen and (max-width: 1400px) {
+  ._hero {
+    width: $per;
+    height: $vh;
+    display: $f;
+    justify-content: $c;
+    align-items: $c;
+    flex-direction: $cl;
+    background: rgb(218, 214, 214);
+    h1 {
+      font-size: 100px;
+    }
+    ._hero_child {
+      width: $perhelf;
+      .firstImage_Hero {
+        overflow: hidden;
+        object-fit: $cv;
+        width: 1000px;
+        height:400px;
+      }
+      .first_child_hero_img {
+        overflow: hidden;
+        img {
+          object-fit: $cv;
+          width: 200px;
+          height: 300px;
+        }
+      }
+      .last_child_hero_img {
+        overflow: hidden;
+        img {
+          object-fit: $cv;
+          width: 200px;
+          height: 300px;
+        }
+      }
+    }
+    .opening_etxt {
+      margin-top: 5px;
+      position: $re;
+      z-index: 9;
+      p {
+        font-weight: $b;
+        font-size: 30px;
+        color: #fff;
+        font-family: $po;
+        text-align: $c;
+        margin: 0;
+      }
+    }
+  }
+}
+//mobile
+@media only screen and (max-width: 620px) {
+  ._hero {
+    height: $per;
+    padding: 0;
+    h1 {
+      font-size: 50px;
+      text-align: $c;
+    }
+    ._hero_child {
+      width: $per;
+      flex-direction: $cl;
+      div {
+        margin-bottom: 20px;
+      }
+      .firstImage_Hero {
+        width: $per !important;
+        height: 370px;
+      }
+    }
+  }
+}

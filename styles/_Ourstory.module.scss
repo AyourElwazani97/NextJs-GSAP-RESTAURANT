@@ -1,0 +1,120 @@
+._ourStory {
+  width: $per;
+  height: $vh;
+  display: $f;
+  justify-content: $c;
+  align-items: $c;
+  flex-direction: $cl;
+  padding: $padd;
+  h1 {
+    font-family: $font;
+    font-size: 180px;
+    letter-spacing: 20px;
+    text-align: $c;
+    color: #000;
+  }
+  img {
+    object-fit: $cv;
+    width: 800px;
+    height: 400px;
+  }
+  .ourStory_child {
+    width: $perhelf;
+    display: $f;
+    justify-content: $sp;
+    align-items: $c;
+    flex-direction: $cl;
+    .ourStory_handelContent {
+      width: 500px;
+      p {
+        font-weight: $b;
+        width: 500px;
+        text-align: $c;
+        line-height: 3;
+      }
+    }
+    .handle_image_ourStory {
+      position: $re;
+      overflow: hidden;
+    }
+  }
+}
+@media only screen and (max-width: 1450px) {
+  ._ourStory {
+    width: $per;
+    height: $per;
+    display: $f;
+    justify-content: $c;
+    align-items: $c;
+    flex-direction: $cl;
+    padding: $padd;
+    margin-bottom: 20px;
+    h1 {
+      font-family: $font;
+      font-size: 180px;
+      letter-spacing: 20px;
+      text-align: $c;
+      color: #000;
+    }
+    img {
+      object-fit: $cv;
+      width: 800px;
+      height: 400px;
+    }
+    .ourStory_child {
+      width: $perhelf;
+      display: $f;
+      justify-content: $sp;
+      align-items: $c;
+      flex-direction: $cl;
+      .ourStory_handelContent {
+        width: 500px;
+        p {
+          font-weight: $b;
+          width: 500px;
+          text-align: $c;
+          line-height: 3;
+        }
+      }
+      .handle_image_ourStory {
+        position: $re;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 620px) {
+  ._ourStory {
+    width: $per;
+    height: $per;
+    padding: 0;
+    margin-bottom: 0px;
+    text-align: $c;
+    h1 {
+      font-family: $font;
+      font-size: 100px;
+      letter-spacing: 20px;
+      text-align: $c;
+      color: #000;
+    }
+    img {
+      object-fit: $cv;
+      width: $per;
+      height: calc($per / 2);
+    }
+    .ourStory_child {
+      width: $per;
+      .ourStory_handelContent {
+        width: $per;
+        p {
+          font-weight: $b;
+          width: $per;
+          text-align: $c;
+          line-height: 3;
+        }
+      }
+      .handle_image_ourStory {
+        position: $re;
+      }
+    }
+  }
+}
