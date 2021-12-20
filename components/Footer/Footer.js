@@ -41,7 +41,7 @@ function Footer() {
           </div>
           <p>©2021 Jarabe Mexican Street Food. All Rights Reserved</p>
           <p className={styles.addresse}>
-          1835 W Harrison St, Chicago, IL 60612, United States
+            1835 W Harrison St, Chicago, IL 60612, United States
           </p>
         </div>
       </div>

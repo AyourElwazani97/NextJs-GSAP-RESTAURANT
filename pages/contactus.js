@@ -2,45 +2,46 @@ import React, { useEffect, useRef } from "react";
 import styles from "../styles/Home.module.scss";
 import Footer from "../components/Footer/Footer";
 import Head from "next/head";
-import Image1 from "../public/image1.jpeg";
-import Image2 from "../public/rinco.jpg";
-import Overlay from "../public/overlay5.jpg";
-import hoverEffect from "hover-effect";
-import {Expo} from 'gsap'
+import gsap, { Expo } from "gsap";
+import ScrollToPlugin from "gsap/dist/ScrollToPlugin";
+gsap.registerPlugin(ScrollToPlugin);
 function ContactUs() {
-  const HoveredEffectDiv = useRef(null);
+  const contactUs = useRef(null);
+  const contactUsChild = useRef(null);
   useEffect(() => {
-    const Hovering = new hoverEffect({
-      parent: HoveredEffectDiv.current,
-      intensity: 3,
-      image1: Image1,
-      image2: Image2,
-      displacementImage: Overlay,
-      easeind:Expo.easeOut
-    });
+    const tl = gsap.timeline();
+    tl.to(contactUs.current, {
+      css: { visibility: "visible" },
+      duration:1
+    }).fromTo(
+      contactUs.current.children[0],
+      { opacity: 0 },
+      {
+        opacity: 1,
+        delay: 0.6,
+        duration: 2,
+        ease: Expo.easeOut,
+      }
+    );
   }, []);
   return (
     <div>
-      <div className={styles.contactUs}>
-        <Head>
-          <title>Jarabe Mexican Street Food - contact us</title>
-          <meta
-            name="description"
-            content="chicago Jarabe Mexican Street Food"
-          />
-          <link rel="icon" href="/logo.png" />
-        </Head>
-        <style jsx global>
-          {`
-            body {
-              background: #000;
-              margin: 0;
-              padding: 0;
-            }
-          `}
-        </style>
-        <div className={styles.contactUs_child}>
-          <div ref={HoveredEffectDiv} className={styles.Hovered_Effect_Div} />
+      <Head>
+        <title>Jarabe Mexican Street Food - contact us</title>
+        <meta name="description" content="chicago Jarabe Mexican Street Food" />
+        <link rel="icon" href="/logo.png" />
+      </Head>
+      <style jsx global>
+        {`
+          body {
+            background: #000;
+            margin: 0;
+            padding: 0;
+          }
+        `}
+      </style>
+      <div ref={contactUs} className={styles.contactUs}>
+        <div ref={contactUsChild} className={styles.contactUs_child}>
           <div className={styles.handle_child_form}>
             <h1>We are so excited to hear from you</h1>
             <form>
@@ -90,8 +91,7 @@ function ContactUs() {
             </form>
           </div>
         </div>
-      <Footer />
-
+        <Footer />
       </div>
     </div>
   );

@@ -7,6 +7,7 @@
   justify-content: $c;
   align-items: $c;
   flex-direction: $cl;
+  visibility: hidden;
   &::before {
     content: "Contact Us";
     color: transparent;
@@ -16,13 +17,6 @@
     position: absolute;
     top: 15%;
     left: 0%;
-  }
-  .Hovered_Effect_Div {
-    width: 700px;
-    height: 700px;
-    position: absolute;
-    z-index: 3;
-    cursor: pointer;
   }
   .contactUs_child {
     width: $perhelf;

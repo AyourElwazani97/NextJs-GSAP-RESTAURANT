@@ -81,7 +81,7 @@ function Gallery() {
         },
         {
           opacity: 1,
-          y: -100,
+          y: -70,
         }
       )
       .fromTo(
@@ -92,7 +92,7 @@ function Gallery() {
         },
         {
           opacity: 1,
-          y: 160,
+          y: 70,
         }
       )
       .fromTo(
@@ -114,7 +114,7 @@ function Gallery() {
         },
         {
           opacity: 1,
-          y: 130,
+          y: 60,
         }
       )
       .fromTo(
@@ -136,7 +136,7 @@ function Gallery() {
         },
         {
           opacity: 1,
-          y: 100,
+          y: 50,
         }
       );
   }, []);
@@ -147,7 +147,7 @@ function Gallery() {
           F**ing
         </span>
         <div ref={greenPanle_ImageHandler} className="greenPanle_ImageHandler">
-          <img src="/mexican-food.jpg" alt="" />
+          <img src="/gallery1.jpg" alt="" />
         </div>
         <span ref={greenPanelSubTitle} className="greenPanelSubTitle">
           DELICIOUS
@@ -158,39 +158,39 @@ function Gallery() {
         <h1>MEXiCAN FOOD, iT&apos;S AUTHENTiC</h1>
         <div ref={images} className="whitePannelGrid">
           <img
-            src="/image2.jpg"
-            width="200"
-            height="300"
+            src="/img-gallery1.jpg"
+            width="340"
+            height="240"
             alt="restaurant chicago el rincon de mexico"
           />
           <img
-            src="/rinco.jpg"
-            width="200"
-            height="300"
+            src="/img-gallery2.jpg"
+            width="340"
+            height="240"
             alt="restaurant chicago el rincon de mexico"
           />
           <img
-            src="/rinco1.jpg"
-            width="200"
-            height="300"
+            src="/img-gallery3.jpg"
+            width="340"
+            height="240"
             alt="restaurant chicago el rincon de mexico"
           />
           <img
-            src="/rinco2.jpg"
-            width="200"
-            height="300"
+            src="/img-gallery4.jpg"
+            width="340"
+            height="240"
             alt="restaurant chicago el rincon de mexico"
           />
           <img
-            src="/rinco3.jpg"
-            width="200"
-            height="350"
+            src="/img-gallery5.jpg"
+            width="340"
+            height="240"
             alt="restaurant chicago el rincon de mexico"
           />
           <img
-            src="/rinco4.jpg"
-            width="200"
-            height="300"
+            src="/img-gallery6.jpg"
+            width="340"
+            height="240"
             alt="restaurant chicago el rincon de mexico"
           />
         </div>

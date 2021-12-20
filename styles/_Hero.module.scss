@@ -6,7 +6,6 @@
   align-items: $c;
   flex-direction: $cl;
   background: rgb(218, 214, 214);
-
   h1 {
     font-family: $font;
     font-size: 180px;
@@ -24,8 +23,8 @@
     .firstImage_Hero {
       overflow: hidden;
       object-fit: $cv;
-      width: 1000px;
-      height: 500px;
+      width: 2000px;
+      height: 600px;
     }
     .image_hero_text {
       position: absolute;

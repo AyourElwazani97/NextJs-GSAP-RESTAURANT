@@ -3,18 +3,18 @@ import styles from "../../styles/Home.module.scss";
 import SplitText from "../../utils/split3.min.js";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
-import { Expo } from "gsap";
+import { Sine } from "gsap";
 function Ourstory() {
   const titleStory = useRef();
   const ourstory = useRef();
   const paraOurstory = useRef();
-  const image_ourStory = useRef(null);
+  const fixed_Year = useRef(null);
+  const twenyOne = useRef(null);
+  const twenyTwo = useRef(null);
+  const twenyThree = useRef(null);
+  const YearsContent = useRef(null);
   gsap.registerPlugin(ScrollTrigger, SplitText);
   useEffect(() => {
-    const mySplitText = new SplitText(paraOurstory.current, {
-        type: "words,chars",
-      }),
-      chars = mySplitText.chars;
     gsap.set(paraOurstory.current, { perspective: 400 });
     const spliTitle = new SplitText(titleStory.current, {
       type: "lines",
@@ -25,7 +25,7 @@ function Ourstory() {
       linesClass: "lineParent",
     });
     const tl = gsap.timeline({
-      ease: Expo.easeOut,
+      ease: Sine.easeOut,
       scrollTrigger: {
         trigger: ourstory.current,
         toggleActions: "play",
@@ -35,54 +35,57 @@ function Ourstory() {
         pin: true,
       },
     });
-    tl.fromTo(
-      spliTitle.lines,
-      { y: 200, opacity: 0 },
-      {
-        y: 0,
+    tl.to(spliTitle.lines, {
+      y: 0,
+      opacity: 1,
+      stagger: 0.1,
+      duration: 2,
+    })
+      .to(YearsContent.current, {
         opacity: 1,
-        stagger: 0.1,
-      }
-    )
-      .from(chars, {
-        opacity: 0,
-        scale: 0,
-        y: 80,
-        rotationX: 180,
-        transformOrigin: "0% 50% -50",
-        ease: "back",
-        stagger: 0.01,
+        x: window.innerWidth > 600 ? 200 : 0,
+        duration: 2.5,
+        scale: window.innerWidth > 600 ? 1.2 : 1,
       })
+      .to(twenyOne.current, { y: 500, duration: 2 })
+      .fromTo(twenyTwo.current, { opacity: 0 }, { opacity: 1, duration: 2 })
       .fromTo(
-        image_ourStory.current,
-        { opacity: 0, clipPath: "inset(100%  -40%)" },
-        {
-          opacity: 1,
-          clipPath: "inset(0%  0%)",
-        }
+        twenyTwo.current,
+        { y: 0, opacity: 1 },
+        { y: 500, opacity: 0, duration: 2 }
       )
-      .to(image_ourStory.current.children[0], {
-        scale: 1.6,
-      });
+      .fromTo(twenyThree.current, { opacity: 0 }, { opacity: 1, duration: 2 });
   }, []);
   return (
     <section className={styles.ourStorySectyion} ref={ourstory}>
       <div className={styles._ourStory}>
         <h1 ref={titleStory}>Our Story</h1>
         <div className={styles.ourStory_child}>
-          <div className={styles.ourStory_handelContent}>
-            <p ref={paraOurstory}>
-              Jarabe Mexican Street Food
-              <br />
-              Tacos, tortas & other Mexican street food doled out in an
-              unassuming counter-serve eatery.
-              <br />
-              and we offer all type of services
-            </p>
-          </div>
-          <div>
-            <div className={styles.handle_image_ourStory} ref={image_ourStory}>
-              <img src="/rinco2.jpg" width="800" height="400" alt="" />
+          <div ref={YearsContent} className={styles.ourStory_Magic_Years}>
+            <div ref={fixed_Year}>
+              <h1>20</h1>
+            </div>
+            <div className={styles.handle_all_Years_content}>
+              <div className={styles.handle_all_Years_content_child}>
+                <div ref={twenyOne} className={styles.content_magic_years}>
+                  <h2>19</h2>
+                  <div>
+                    <img src="/story1.jpg" alt="" />
+                  </div>
+                </div>
+                <div ref={twenyTwo} className={styles.content_magic_years}>
+                  <h2>20</h2>
+                  <div>
+                    <img src="/story2.jpg" alt="" />
+                  </div>
+                </div>
+                <div ref={twenyThree} className={styles.content_magic_years}>
+                  <h2>21</h2>
+                  <div>
+                    <img src="/story3.jpg" alt="" />
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

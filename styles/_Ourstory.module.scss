@@ -1,57 +1,82 @@
 ._ourStory {
   width: $per;
   height: $vh;
-  display: $f;
-  justify-content: $c;
-  align-items: $c;
-  flex-direction: $cl;
   padding: $padd;
   h1 {
     font-family: $font;
     font-size: 180px;
     letter-spacing: 20px;
     text-align: $c;
-    color: #000;
+    mix-blend-mode: difference;
   }
   img {
     object-fit: $cv;
-    width: 800px;
-    height: 400px;
   }
   .ourStory_child {
     width: $perhelf;
     display: $f;
-    justify-content: $sp;
+    justify-content: $c;
     align-items: $c;
     flex-direction: $cl;
-    .ourStory_handelContent {
-      width: 500px;
-      p {
-        font-weight: $b;
-        width: 500px;
-        text-align: $c;
-        line-height: 3;
-      }
-    }
     .handle_image_ourStory {
       position: $re;
       overflow: hidden;
     }
   }
 }
-@media only screen and (max-width: 1450px) {
+.ourStory_Magic_Years {
+  width: $perhelf;
+  display: $f;
+  justify-self: $sp;
+  align-items: $c;
+  h1 {
+    position: $re;
+    &::after {
+      content: "/";
+      position: absolute;
+      left: -2%;
+      top: 0;
+      color: red;
+    }
+  }
+  .content_magic_years {
+    position: $re;
+    display: $f;
+    h2 {
+      font-family: $font;
+      font-size: 180px;
+      letter-spacing: 20px;
+      text-align: $c;
+      opacity: 0.7;
+    }
+  }
+  .handle_all_Years_content {
+    position: $re;
+    .handle_all_Years_content_child {
+      display: $f;
+      justify-content: $c;
+      align-items: $c;
+      .content_magic_years {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        img {
+          width: 600px;
+          height: 400px;
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 1400px) {
   ._ourStory {
     width: $per;
-    height: $per;
-    display: $f;
-    justify-content: $c;
-    align-items: $c;
-    flex-direction: $cl;
-    padding: $padd;
+    height: $vh;
     margin-bottom: 20px;
     h1 {
       font-family: $font;
-      font-size: 180px;
+      font-size: 100px;
       letter-spacing: 20px;
       text-align: $c;
       color: #000;
@@ -81,9 +106,55 @@
       }
     }
   }
+  .ourStory_Magic_Years {
+    width: $perhelf;
+    display: $f;
+    justify-self: $sp;
+    align-items: $c;
+    h1 {
+      position: $re;
+      &::after {
+        content: "/";
+        position: absolute;
+        left: -2%;
+        top: 0;
+        color: red;
+      }
+    }
+    .content_magic_years {
+      position: $re;
+      display: $f;
+      h2 {
+        font-family: $font;
+        font-size: 100px;
+        letter-spacing: 20px;
+        text-align: $c;
+        opacity: 0.7;
+      }
+    }
+    .handle_all_Years_content {
+      position: $re;
+      .handle_all_Years_content_child {
+        display: $f;
+        justify-content: $c;
+        align-items: $c;
+        .content_magic_years {
+          position: absolute;
+          left: 0;
+          right: 0;
+          top: 0;
+          img {
+            width: 500px;
+            height: 300px;
+          }
+        }
+      }
+    }
+  }
 }
 @media only screen and (max-width: 620px) {
   ._ourStory {
+    display: none;
     width: $per;
     height: $per;
     padding: 0;
@@ -114,6 +185,51 @@
       }
       .handle_image_ourStory {
         position: $re;
+      }
+    }
+  }
+  .ourStory_Magic_Years {
+    width: $per;
+    display: $f;
+    justify-self: $sp;
+    align-items: $c;
+    h1 {
+      font-size: 30px !important;
+      position: $re;
+      &::after {
+        content: "/";
+        position: absolute;
+        left: 0%;
+        top: 0;
+        color: red;
+      }
+    }
+    .content_magic_years {
+      position: $re;
+      display: $f;
+      h2 {
+        font-family: $font;
+        font-size: 30px !important;
+        letter-spacing: 20px;
+        text-align: $c;
+        opacity: 0.7;
+      }
+    }
+    .handle_all_Years_content {
+      position: $re;
+      .handle_all_Years_content_child {
+        display: $f;
+        justify-content: $c;
+        align-items: $c;
+        .content_magic_years {
+          position: absolute;
+          left: 0;
+          top: 0;
+          img {
+            width: 250px;
+            height: 400px;
+          }
+        }
       }
     }
   }

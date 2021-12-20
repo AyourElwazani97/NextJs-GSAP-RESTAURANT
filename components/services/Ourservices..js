@@ -29,47 +29,66 @@ function Ourservices() {
         },
       });
       tlService
-        .fromTo(service_title.current, { opacity: 0 }, { opacity: 1 })
-        .to(firstHandler.current.children[0], { clipPath: "inset(0% 0%)" })
+        .fromTo(
+          service_title.current,
+          { opacity: 0 },
+          { opacity: 1, duration: 2.5 }
+        )
+        .to(firstHandler.current.children[0], {
+          clipPath: "inset(0% 0%)",
+          duration: 2.5,
+        })
         .fromTo(
           firstHandler.current.children[1],
           { opacity: 0 },
-          { opacity: 1 }
+          { opacity: 1, duration: 2.5 }
         )
-        .to(firstHandler.current.children[0], { scale: 1.6 })
-        .to(firstHandler.current, { y: -270 })
-        .to(secondHandler.current.children[0], { clipPath: "inset(0% 0%)" })
+        .to(firstHandler.current.children[0], { scale: 1.6, duration: 2.5 })
+        .to(firstHandler.current, { y: -270, duration: 2.5 })
+        .to(secondHandler.current.children[0], {
+          clipPath: "inset(0% 0%)",
+          duration: 2.5,
+        })
         .fromTo(
           secondHandler.current.children[1],
           { opacity: 0 },
-          { opacity: 1, color: "#FFF" }
+          { opacity: 1, color: "#FFF", duration: 2.5 }
         )
-        .to(secondHandler.current.children[0], { scale: 1.6 })
-        .to(secondHandler.current, { y: 250 })
-        .to(thirdHandler.current.children[0], { clipPath: "inset(0% 0%)" })
+        .to(secondHandler.current.children[0], { scale: 1.6, duration: 2.5 })
+        .to(secondHandler.current, { y: 250, duration: 2.5 })
+        .to(thirdHandler.current.children[0], {
+          clipPath: "inset(0% 0%)",
+          duration: 2.5,
+        })
         .fromTo(
           thirdHandler.current.children[1],
           { opacity: 0 },
-          { opacity: 1, color: "#FFF" }
+          { opacity: 1, color: "#FFF", duration: 2.5 }
         )
-        .to(thirdHandler.current.children[0], { scale: 1.6 })
         .to(thirdHandler.current, { y: -260 })
-        .to(fourthHandler.current.children[0], { clipPath: "inset(0% 0%)" })
+        .to(thirdHandler.current.children[0], { scale: 1.6, duration: 2.5 })
+        .to(fourthHandler.current.children[0], {
+          clipPath: "inset(0% 0%)",
+          duration: 2.5,
+        })
         .fromTo(
           fourthHandler.current.children[1],
           { opacity: 0 },
-          { opacity: 1 }
+          { opacity: 1, duration: 2.5 }
         )
-        .to(fourthHandler.current.children[0], { scale: 1.6 })
         .to(fourthHandler.current, { y: 240 })
-        .to(fifththHandler.current.children[0], { clipPath: "inset(0% 0%)" })
+        .to(fourthHandler.current.children[0], { scale: 1.6, duration: 2.5 })
+        .to(fifththHandler.current.children[0], {
+          clipPath: "inset(0% 0%)",
+          duration: 2.5,
+        })
         .fromTo(
           fifththHandler.current.children[1],
           { opacity: 0 },
-          { opacity: 1 }
+          { opacity: 1, duration: 2.5 }
         )
-        .to(fifththHandler.current.children[0], { scale: 1.6 })
-        .to(fifththHandler.current, { y: -30, x: 160 });
+        .to(fifththHandler.current.children[0], { scale: 1.6, duration: 2.5 })
+        .to(fifththHandler.current, { y: -30, x: 160, duration: 2.5 });
     } else {
       return null;
     }
